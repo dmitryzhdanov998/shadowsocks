@@ -4,7 +4,7 @@ RUN pip install https://github.com/shadowsocks/shadowsocks/archive/master.zip
 
 ENV SERVER_ADDR=0.0.0.0 \
     SERVER_PORT=8388 \
-    PASSWORD=yourpassword \
+    PASSWORD=13371337 \
     METHOD=aes-256-gcm
 
 EXPOSE 8388
