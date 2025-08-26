@@ -2,7 +2,7 @@ FROM shadowsocks/shadowsocks-libev
 
 ENV SERVER_ADDR=0.0.0.0 \
     SERVER_PORT=8388 \
-    PASSWORD=yourpassword \
+    PASSWORD=1234567890 \
     METHOD=aes-256-gcm
 
 EXPOSE 8388/tcp
