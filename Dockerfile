@@ -1,11 +1,12 @@
-FROM shadowsocks/shadowsocks-libev
+FROM python:3.11-slim
+
+RUN pip install https://github.com/shadowsocks/shadowsocks/archive/master.zip
 
 ENV SERVER_ADDR=0.0.0.0 \
     SERVER_PORT=8388 \
-    PASSWORD=1234567890 \
+    PASSWORD=yourpassword \
     METHOD=aes-256-gcm
 
-EXPOSE 8388/tcp
-EXPOSE 8388/udp
+EXPOSE 8388
 
-CMD ss-server -s $SERVER_ADDR -p $SERVER_PORT -k $PASSWORD -m $METHOD
+CMD ssserver -s $SERVER_ADDR -p $SERVER_PORT -k $PASSWORD -m $METHOD
